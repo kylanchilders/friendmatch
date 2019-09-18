@@ -1,7 +1,6 @@
 // Dependencies
 // =============================================================
 var express = require("express");
-var path = require("path");
 var apiRoutes = require("./app/routing/apiRoutes.js");
 var htmlRoutes = require("./app/routing/htmlRoutes.js");
 
@@ -15,6 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/', htmlRoutes);
+app.use('/api/', apiRoutes);
+
 
 // Starts the server to begin listening
 // =============================================================
