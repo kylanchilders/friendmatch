@@ -15,6 +15,54 @@ var friendsArray = [
             1
         ]
     },
+    {
+        name:"Dracula",
+        photo:"https://pmcvariety.files.wordpress.com/2015/11/dracula-universal.jpg?w=1000",
+        scores:[
+            3,
+            2,
+            2,
+            3,
+            4,
+            1,
+            1,
+            5,
+            5,
+            1
+        ]
+    },
+    {
+        name:"Frankenstein",
+        photo:"https://thumbs-prod.si-cdn.com/PaM9md6Rj1UiJ_rIEid4ZUWb1K8=/800x600/filters:no_upscale()/https://public-media.si-cdn.com/filer/60/d0/60d01288-2f07-40ca-880b-f0aae4c43eb8/frankensteins_monster_boris_karloff.jpg",
+        scores:[
+            1,
+            1,
+            5,
+            5,
+            3,
+            4,
+            3,
+            4,
+            2,
+            2
+        ]
+    },
+    {
+        name:"Wolfman",
+        photo:"https://hips.hearstapps.com/pop.h-cdn.co/assets/cm/15/05/54ca9c73b0b2e_-_wolfman-470d-0210.jpg?fill=320:234&resize=480:*",
+        scores:[
+            4,
+            2,
+            4,
+            2,
+            5,
+            3,
+            5,
+            1,
+            3,
+            5
+        ]
+    },
 ];
 
 module.exports = friendsArray;

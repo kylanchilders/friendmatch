@@ -11,24 +11,27 @@
 
   </head>
   <body>
-    <form>
+    <div class="row">
+    <div class="col-12">
+    <form style="margin-left:2%">
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="col-4 my-1">
                 <p>What is your name?</p>
-                <input type="text" class="form-control" placeholder="Name">
+                <input type="text" id="nameInput" class="form-control" placeholder="Name">
             </div>
         </div>
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="col-4 my-1">
                 <p>Upload a picture</p>
-                <input type="text" class="form-control" placeholder="Enter URL to picture here">
+                <input type="text" id="pictureInput" class="form-control" placeholder="Enter URL to picture here">
             </div>
         </div>
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="col-4 my-1">
                 <p>You prefer a quiet night in more than a wild night out</p>
+                <div class="col-2 my-1">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <select class="custom-select mr-sm-2" id="answer1" id="inlineFormCustomSelect">
                       <option selected></option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -36,13 +39,15 @@
                       <option value="4">4</option>
                       <option value="5">5</option>
                     </select>
+                </div>
             </div>
         </div>
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="col-4 my-1">
                 <p>You would rather go see a play than a movie</p>
+                <div class="col-2 my-1">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <select class="custom-select mr-sm-2" id="answer2" id="inlineFormCustomSelect">
                         <option selected></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -50,13 +55,15 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
+                </div>
             </div>
         </div>
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="col-4 my-1">
                 <p>You keep your living space neat and orderly</p>
+                <div class="col-2 my-1">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <select class="custom-select mr-sm-2" id="answer3" id="inlineFormCustomSelect">
                         <option selected></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -64,13 +71,15 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
+                </div>
             </div>
         </div>
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="col-4 my-1">
                 <p>You like animals</p>
+                <div class="col-2 my-1">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <select class="custom-select mr-sm-2" id="answer4" id="inlineFormCustomSelect">
                         <option selected></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -78,13 +87,15 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
+                </div>
             </div>
         </div>
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="col-4 my-1">
                 <p>You enjoy dramas more than comedies</p>
+                <div class="col-2 my-1">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <select class="custom-select mr-sm-2" id="answer5" id="inlineFormCustomSelect">
                         <option selected></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -92,13 +103,15 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
+                </div>
             </div>
         </div>
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="col-4 my-1">
                 <p>You would rather talk on the phone than text</p>
+                <div class="col-2 my-1">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <select class="custom-select mr-sm-2" id="answer6" id="inlineFormCustomSelect">
                         <option selected></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -106,13 +119,15 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
+                </div>
             </div>
         </div>
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="col-4 my-1">
                 <p>Punctuality is important to you</p>
+                <div class="col-2 my-1">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <select class="custom-select mr-sm-2" id="answer7" id="inlineFormCustomSelect">
                         <option selected></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -120,13 +135,15 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
+                </div>
             </div>
         </div>
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="col-4 my-1">
                 <p>You would rather be blunt/truthful than spare someone's feelings</p>
+                <div class="col-2 my-1">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <select class="custom-select mr-sm-2" id="answer8" id="inlineFormCustomSelect">
                         <option selected></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -134,13 +151,15 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
+                </div>
             </div>
         </div>
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="col-4 my-1">
                 <p>You enjoy your alone time</p>
+                <div class="col-2 my-1">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <select class="custom-select mr-sm-2" id="answer9" id="inlineFormCustomSelect">
                         <option selected></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -148,13 +167,15 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
+                </div>
             </div>
         </div>
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="col-4 my-1">
                 <p>You enjoy outdoor activities and being in nature</p>
+                <div class="col-2 my-1">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <select class="custom-select mr-sm-2" id="answer10" id="inlineFormCustomSelect">
                         <option selected></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -162,18 +183,65 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
+                </div>
             </div>
         </div>
-        <div class="col-auto my-1">
-            <button type="submit" class="btn btn-primary">Submit Answers</button>
+        <div class="col-4 my-1">
+            <button type="submit" class="btn btn-primary" onclick="submitAnswers()">Submit Answers</button>
         </div>
     </form>
+    </div>
+    </div>
     
-      
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+
+        function submitAnswers(){
+
+            var answerArray = [$("#answer1").val(), $("#answer2").val(), $("#answer3").val(), $("#answer4").val(), $("#answer5").val(), $("#answer6").val(), $("#answer7").val(), $("#answer8").val(), $("#answer9").val(), $("#answer10").val()];
+
+            var nameInput = $("#nameInput").val();
+            var pictureInput = $("#pictureInput").val();
+
+            var newFriend = {
+                name: nameInput,
+                photo: pictureInput,
+                scores: answerArray
+            };
+
+            $.post("/api/friends", newFriend)
+                .then(function(data) {
+
+                $.get("/api/friends", function(data){
+                    if(data) {
+                        answerDifArray = [];
+                        answerDifAverage = 100;
+                        for(i=0; i < data.length; i++){
+                            if(data[i].name != nameInput){
+                                for(j=0; j < data[i].scores.length; j++){
+                                    var answerDif = Math.abs(data[i].scores[j] - answerArray[j]);
+                                    answerDifArray.push(answerDif);
+                                }
+                                var answerDifAverageTemp = answerDifArray => answerDifArray.reduce((a,b) => a + b, 0) / answerDifArray.length;
+                                if(answerDifAverageTemp < answerDifAverage){
+                                    answerDifAverage = answerDifAverageTemp;
+                                }
+                            }
+                        }
+                    }
+
+
+                })
+
+                    
+            });
+
+        };
+
+    </script>
+
   </body>
 </html>
