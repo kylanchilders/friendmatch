@@ -187,11 +187,30 @@
             </div>
         </div>
         <div class="col-4 my-1">
-            <button type="submit" class="btn btn-primary" onclick="submitAnswers()">Submit Answers</button>
+            <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" onclick="submitAnswers()">Submit Answers</button>
         </div>
     </form>
     </div>
     </div>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Your new closest friend!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="friendMatchInfo">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+          
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -201,6 +220,7 @@
 
         function submitAnswers(){
 
+            event.preventDefault()
             var answerArray = [$("#answer1").val(), $("#answer2").val(), $("#answer3").val(), $("#answer4").val(), $("#answer5").val(), $("#answer6").val(), $("#answer7").val(), $("#answer8").val(), $("#answer9").val(), $("#answer10").val()];
 
             var nameInput = $("#nameInput").val();
@@ -214,28 +234,35 @@
 
             $.post("/api/friends", newFriend)
                 .then(function(data) {
-
-                $.get("/api/friends", function(data){
+                    $.get("/api/friends", function(data){
                     if(data) {
-                        answerDifArray = [];
-                        answerDifAverage = 100;
+                        var answerDifArray = [];
+                        var answerDifAverage = 100;
+                        var closestFriend = "";
+                        var closestFriendPhoto = "";
                         for(i=0; i < data.length; i++){
-                            if(data[i].name != nameInput){
+                            var tempFriend = data[i].name;
+                            var tempPhoto = data[i].photo;
+                            if(tempFriend != nameInput){
                                 for(j=0; j < data[i].scores.length; j++){
                                     var answerDif = Math.abs(data[i].scores[j] - answerArray[j]);
                                     answerDifArray.push(answerDif);
                                 }
-                                var answerDifAverageTemp = answerDifArray => answerDifArray.reduce((a,b) => a + b, 0) / answerDifArray.length;
+                                var tempTotal = 0;
+                                for(k=0; k < answerDifArray.length; k++){
+                                    tempTotal += answerDifArray[k];
+                                }
+                                var answerDifAverageTemp = tempTotal / 10; 
                                 if(answerDifAverageTemp < answerDifAverage){
                                     answerDifAverage = answerDifAverageTemp;
+                                    closestFriend = tempFriend;
+                                    closestFriendPhoto = tempPhoto;   
                                 }
                             }
                         }
+                        $("#friendMatchInfo").html("<p>" + closestFriend + "</p><hr><div><img src='" + closestFriendPhoto + "' height='60%' width='60%'></div>");
                     }
-
-
                 })
-
                     
             });
 
@@ -244,4 +271,5 @@
     </script>
 
   </body>
+
 </html>
