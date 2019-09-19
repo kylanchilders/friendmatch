@@ -236,11 +236,11 @@
                 .then(function(data) {
                     $.get("/api/friends", function(data){
                     if(data) {
-                        var answerDifArray = [];
                         var answerDifAverage = 100;
                         var closestFriend = "";
                         var closestFriendPhoto = "";
                         for(i=0; i < data.length; i++){
+                            var answerDifArray = [];
                             var tempFriend = data[i].name;
                             var tempPhoto = data[i].photo;
                             if(tempFriend != nameInput){
